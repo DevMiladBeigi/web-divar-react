@@ -1,10 +1,12 @@
 import React from "react";
 import Box from "./HeaderStyle";
+import Logo from "./logo/Logo";
+import Locations from "./locations/Locations";
 const Header = () => {
   return (
     <Box>
-      <h1>Header</h1>
-   
+      <Locations/>
+      <Logo />
     </Box>
   );
 };
