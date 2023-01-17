@@ -9,6 +9,12 @@ const Box=styled.div`
     margin-top: 66px;
     justify-content: right;
     margin-right: 272px;
+    @media (max-width: 1024px) {
+        width: 848px;
+        height: auto;
+        margin-right:178px;
+
+      }
 
 `
 

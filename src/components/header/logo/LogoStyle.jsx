@@ -5,6 +5,13 @@ export const Image = styled.img`
   height: 48px;
   text-align: center;
   margin-right: 80px;
+  @media (max-width: 1024px) {
+    margin-right: 20px;
+    width: 38px;
+  height: 38px;
+
+      }
+  
 `;
 export const Line = styled.div`
   border-left: 1px solid #e0dede;

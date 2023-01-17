@@ -2,24 +2,33 @@ import { createGlobalStyle } from "styled-components";
 import Vazir from "../../assets/fonts/Vazir.ttf";
 
 const GlobalStyles = createGlobalStyle`
+
  @font-face {
     font-family: 'Vazir';
     src: url(${Vazir});
   }
 Button{
+    width: auto;
+    height: 38px;
     font-family: "Vazir";
     cursor: pointer;
     border: none;
     background-color: white;
     border-radius: 6px;
     align-items: center;
-    
     display: flex;
     justify-content: center;
   img{
     width: 20px;
     height: 20px;
     padding-left: 10px;
+    @media (max-width: 1024px) {
+      width: 15px;
+      height: 15px;
+      padding-left: 6px;
+  
+
+      }
   }
   &:hover{
     background-color:#f3f3f3;
@@ -38,6 +47,10 @@ Button{
     font-size: 14px;
     color:#6d6969;
     margin-left: 5px;
+   
+      @media (max-width: 1024px) {
+        font-size: 12px;
+      }
   }
 
 }

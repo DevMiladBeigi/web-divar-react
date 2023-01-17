@@ -6,6 +6,9 @@ const Box=styled.div`
     height: auto;
     display: flex;
     justify-content: flex-end;
+    @media (max-width: 1024px) {
+        width: 1024px;
+      }
 `
 
 export default Box
