@@ -2,12 +2,10 @@ import styled from "styled-components";
 
 
 const Box=styled.div`
-    max-width: 1583px;
+    width: 1570px;
     height: auto;
     display: flex;
-    /* flex-direction: row; */
-    /* flex-wrap: nowrap; */
-    /* justify-content: flex-start; */
+    justify-content: flex-end;
 `
 
 export default Box

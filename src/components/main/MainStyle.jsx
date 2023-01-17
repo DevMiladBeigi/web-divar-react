@@ -8,6 +8,7 @@ const Box=styled.div`
     background-color: #e91d1d;
     margin-top: 66px;
     justify-content: right;
+    margin-right: 272px;
 
 `
 

@@ -41,6 +41,20 @@ Button{
   }
 
 }
+input{
+  font-family: "Vazir";
+  font-size: 1rem;
+    font-weight: 400;
+    color:#6d6969;
+    background-color: #f5f4f4;
+    border: none;
+    ::placeholder{
+      color: #b8b8b8;
+      font-size: 14px;
+    }
+   
+  
+}
 `;
 
 export default GlobalStyles;
