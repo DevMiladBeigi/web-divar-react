@@ -7,7 +7,7 @@ import {
   ButtonCity,
   BoxCity,
 } from "./LocationModalHeaderStyle";
-import closeRed from "../../../../../assets/images/closeRed.svg";
+import closeRed from "../../../assets/images/closeRed.svg";
 const LocationModalHeader = () => {
   return (
     <Box>

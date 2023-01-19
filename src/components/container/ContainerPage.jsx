@@ -8,8 +8,8 @@ const ContainerPage = () => {
     <div>
       <Box>
         <Header />
-        <Main/>
-        <RightSidebar />
+        {/* <Main/>
+        <RightSidebar /> */}
       </Box>
     </div>
   );

@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-import Vazir from '../../../../assets/fonts/Vazir.ttf'
+import Vazir from '../../assets/fonts/Vazir.ttf'
 
 
 export const LocationGlobalStyles = createGlobalStyle`

@@ -1,7 +1,7 @@
 
 import React from "react";
 import {Search,ImageIcon,FormSearch,HorizontalLine} from "./LocationModalSearchStyle";
-import searchIcon from '../../../../../assets/images/searchIcon.svg'
+import searchIcon from '../../../assets/images/searchIcon.svg'
 const LocationModalSearch = () => {
   return (
     <>
