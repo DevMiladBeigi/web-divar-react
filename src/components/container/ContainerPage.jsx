@@ -3,6 +3,7 @@ import Box from "./ContainerPageStyle";
 import Header from "../header/Header";
 import RightSidebar from "../rightSidebar/RightSidebar";
 import Main from "../main/Main";
+import LocationModalSelectCity from "../locationModal/locationModalSelectCity/LocationModalSelectCity";
 const ContainerPage = () => {
   return (
     <div>
@@ -10,6 +11,7 @@ const ContainerPage = () => {
         <Header />
         {/* <Main/>
         <RightSidebar /> */}
+
       </Box>
     </div>
   );

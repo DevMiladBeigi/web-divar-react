@@ -6,9 +6,8 @@ export const Box = styled.div`
   /* background-color: red; */
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  overflow: auto;
   text-align: right;
+  overflow: auto;
   ::-webkit-scrollbar {
     width: 6px;
   }
@@ -62,55 +61,6 @@ export const BoxCity = styled.div`
     justify-content: right;
   }
 `;
-
-// export const BoxButton = styled.div`
-//   width: 488px;
-//   height: auto;
-//   display: flex;
-//   margin-top: 29px;
-//   justify-content: right;
-//   &:hover {
-//     background-color: white;
-//   }
-//   div {
-//     font-weight: 500;
-//   }
-// `;
-// export const ButtonAccept = styled.button`
-//   width: 490px;
-//   height: 45px;
-//   margin-right: 15px;
-//   background-color: #f55d5d;
-//   &:hover {
-//     background-color: #cf4a4a;
-//     div {
-//       font-weight: 500;
-//     }
-//   }
-//   div {
-//     color: white;
-//     font-size: 18px;
-//   }
-// `;
-// export const ButtonCancel = styled.button`
-//   width: 290px;
-//   height: 45px;
-
-//   border: 1px solid #777676;
-
-//   &:hover {
-//     background-color: #e9e9e9;
-//     div {
-//       font-weight: 500;
-//     }
-//   }
-//   div {
-//     font-size: 18px;
-//     &:hover {
-//       background-color: #e9e9e9;
-//     }
-//   }
-// `;
 
 export const HorizontalLine = styled.div`
   border-top: 2px solid #b8b5b5;

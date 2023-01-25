@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Button,
@@ -8,28 +8,24 @@ import {
   BoxCity,
 } from "./LocationModalHeaderStyle";
 import closeRed from "../../../assets/images/closeRed.svg";
-const LocationModalHeader = () => {
+const LocationModalHeader = (props) => {
+
+
   return (
     <Box>
       <Button> حذف همه</Button>
       <HeaderTitle> انتخاب شهر</HeaderTitle>
-      <HeaderDes>.حداقل یک شهر را انتخاب کنید</HeaderDes>
-      <BoxCity>
-        <ButtonCity>
-          <img src={closeRed} />
-        </ButtonCity>
-        <div>اراک</div>
-      </BoxCity><BoxCity>
-        <ButtonCity>
-          <img src={closeRed} />
-        </ButtonCity>
-        <div>  تهران</div>
-      </BoxCity><BoxCity>
-        <ButtonCity>
-          <img src={closeRed} />
-        </ButtonCity>
-        <div>مشهد</div>
-      </BoxCity>
+
+      {props.checked.length
+        ? props.checked.map((item) => (
+            <BoxCity>
+              <ButtonCity>
+                <img src={closeRed} />
+              </ButtonCity>
+              <div>{item}</div>
+            </BoxCity>
+          ))
+        : "یک شهر را انتخاب کنید"}
     </Box>
   );
 };

@@ -9,12 +9,12 @@ import {
 } from "./LocationModalCitiesStyle";
 import leftArrow from "../../../assets/images/leftArrow.svg";
 import * as S from "./LocationModalCitiesStyle";
-const LocationModalCities = () => {
+const LocationModalCities = (props) => {
   return (
     <>
       <Box>
         <BoxCity>
-          <button>
+          <button onClick={props.handlershowComponent}>
             <img src={leftArrow} />
             <span> استان مرکزی </span>
           </button>
