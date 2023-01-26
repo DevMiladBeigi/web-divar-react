@@ -11,12 +11,28 @@ import LocationModalSearch from "./locationModalSearch/LocationModalSearch";
 import LocationModalCities from "./locationModalCities/LocationModalCities";
 import LocationModalSelectCity from "./locationModalSelectCity/LocationModalSelectCity";
 const LocationModalContainer = ({ isOpenModal, setIsOpenModal }) => {
-  const [showComponent, setShowComponent] = useState(true);
-  const checkList = ["اراک", "محلات", "شازند", "خمین"];
-  const [checked, setChecked] = useState([]);
   const handlershowComponent = () => {
     setShowComponent(!showComponent);
   };
+  const [showComponent, setShowComponent] = useState(true);
+  const checkList = [
+    { id: 1, name: "تهران", check: false },
+    { id: 2, name: "اراک", check: false },
+    { id: 3, name: "مشهد", check: false },
+    { id: 4, name: "شیراز", check: false },
+  ];
+  const [checked, setChecked] = useState([]);
+
+  const removeAllCity = () => {
+    setChecked([]);
+  };
+
+  const filterHandler = (value) => {
+    setChecked((oldValues) => {
+      return oldValues.filter((item) => item !== value);
+    });
+  };
+
   const handleCheck = (event) => {
     var updatedList = [...checked];
     if (event.target.checked) {
@@ -44,7 +60,11 @@ const LocationModalContainer = ({ isOpenModal, setIsOpenModal }) => {
     isOpenModal && (
       <Box ref={menRef}>
         <LocationGlobalStyles />
-        <LocationModalHeader checked={checked} />
+        <LocationModalHeader
+          checked={checked}
+          removeAllCity={removeAllCity}
+          filterHandler={filterHandler}
+        />
         <LocationModalSearch />
 
         {showComponent ? (

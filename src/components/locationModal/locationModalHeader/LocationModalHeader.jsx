@@ -9,23 +9,23 @@ import {
 } from "./LocationModalHeaderStyle";
 import closeRed from "../../../assets/images/closeRed.svg";
 const LocationModalHeader = (props) => {
-
-
   return (
     <Box>
-      <Button> حذف همه</Button>
+      <Button onClick={props.removeAllCity}> حذف همه</Button>
       <HeaderTitle> انتخاب شهر</HeaderTitle>
 
       {props.checked.length
         ? props.checked.map((item) => (
-            <BoxCity>
-              <ButtonCity>
+            <BoxCity key={item}>
+              <ButtonCity onClick={()=>props.filterHandler(item)} >
                 <img src={closeRed} />
               </ButtonCity>
               <div>{item}</div>
             </BoxCity>
           ))
         : "یک شهر را انتخاب کنید"}
+
+
     </Box>
   );
 };

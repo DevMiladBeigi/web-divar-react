@@ -9,7 +9,6 @@ import {
 } from "../locationModalHeader/LocationModalHeaderStyle";
 
 const LocationModalSelectCity = (props) => {
-
   return (
     <>
       <S.Box>
@@ -27,15 +26,16 @@ const LocationModalSelectCity = (props) => {
           </S.BoxInput>
         </S.BoxSelectCity>
 
-        {props.checkList.map((item, index) => (
-          <S.BoxSelectCity key={index}>
-            <S.BoxInput>
+        {props.checkList.map((item) => (
+          <S.BoxSelectCity>
+            <S.BoxInput key={item.id}>
               <input
-                value={item}
+                onClick={props.handleCheck}
                 type="checkbox"
-                onChange={props.handleCheck}
+                id={item.id}
+                value={item.name}
               />
-              <span>{item}</span>
+              <span>{item.name}</span>
             </S.BoxInput>
           </S.BoxSelectCity>
         ))}
