@@ -42,6 +42,14 @@ const LocationModalContainer = ({ isOpenModal, setIsOpenModal }) => {
     }
   };
 
+  const disableButton = () => {
+    if (checkboxs.filter((item) => item?.isChecked == true).length >= 1) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
   let menRef = useRef();
   useEffect(() => {
     let handler = (event) => {
@@ -76,7 +84,7 @@ const LocationModalContainer = ({ isOpenModal, setIsOpenModal }) => {
         )}
 
         <BoxButton>
-          <ButtonAccept>تایید</ButtonAccept>
+          <ButtonAccept disabled={disableButton()}>تایید</ButtonAccept>
           <ButtonCancel onClick={() => setIsOpenModal(!isOpenModal)}>
             انصراف
           </ButtonCancel>

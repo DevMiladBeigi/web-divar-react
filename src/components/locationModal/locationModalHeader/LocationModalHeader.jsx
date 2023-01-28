@@ -15,21 +15,25 @@ const LocationModalHeader = (props) => {
         حذف همه
       </Button>
       <HeaderTitle> انتخاب شهر</HeaderTitle>
-
-      {props.checkboxs.map((item) => {
-        if (item?.isChecked || false) {
-          return (
-            <BoxCity>
-              <ButtonCity name={item.name} onClick={props.remove} id={item.id}>
-                <img src={closeRed} />
-              </ButtonCity>
-              <div>{item.name}</div>
-            </BoxCity>
-          );
-        } else {
-          return <div>{item.milad}</div>;
-        }
-      })}
+      {/* {props.checkboxs.filter((item) => item?.isChecked == true).length >= 1} */}
+      {props.checkboxs.filter((item) => item?.isChecked == true).length >= 1 ? (
+        props.checkboxs.map((item) => {
+          if (item?.isChecked || false) {
+            return (
+              <BoxCity>
+                <ButtonCity name={item.name} id={item.id}>
+                  <img src={closeRed} />
+                </ButtonCity>
+                <div>{item.name}</div>
+              </BoxCity>
+            );
+          } else {
+            return null;
+          }
+        })
+      ) : (
+        <div>حداقل یک شهر را انتخاب کنید</div>
+      )}
     </Box>
   );
 };
