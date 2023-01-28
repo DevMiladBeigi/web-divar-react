@@ -15,25 +15,35 @@ const LocationModalSelectCity = (props) => {
         <S.Back>
           <button onClick={props.handlershowComponent}>
             <div>همه شهرها</div>
+
             <img src={rightArrow} />
           </button>
         </S.Back>
         <S.HorizontalLine />
         <S.BoxSelectCity>
           <S.BoxInput>
-            <input type="checkbox" />
+            <input
+              type="checkbox"
+              name="allSelect"
+              onChange={props.handleChange}
+              checked={
+                props.checkboxs.filter((item) => item?.isChecked !== true)
+                  .length < 1
+              }
+            />
             همه شهرهای استان مرکزی
           </S.BoxInput>
         </S.BoxSelectCity>
 
-        {props.checkList.map((item) => (
+        {props.checkboxs.map((item) => (
           <S.BoxSelectCity>
             <S.BoxInput key={item.id}>
               <input
-                onClick={props.handleCheck}
+                onChange={props.handleChange}
                 type="checkbox"
+                name={item.name}
                 id={item.id}
-                value={item.name}
+                checked={item?.isChecked || false}
               />
               <span>{item.name}</span>
             </S.BoxInput>

@@ -10,37 +10,36 @@ import { LocationGlobalStyles } from "./LocationModalGlobalStyle";
 import LocationModalSearch from "./locationModalSearch/LocationModalSearch";
 import LocationModalCities from "./locationModalCities/LocationModalCities";
 import LocationModalSelectCity from "./locationModalSelectCity/LocationModalSelectCity";
+const checkList = [
+  { id: 1, name: "تهران", check: false },
+  { id: 2, name: "اراک", check: false },
+  { id: 3, name: "مشهد", check: false },
+  { id: 4, name: "شیراز", check: false },
+];
 const LocationModalContainer = ({ isOpenModal, setIsOpenModal }) => {
   const handlershowComponent = () => {
     setShowComponent(!showComponent);
   };
   const [showComponent, setShowComponent] = useState(true);
-  const checkList = [
-    { id: 1, name: "تهران", check: false },
-    { id: 2, name: "اراک", check: false },
-    { id: 3, name: "مشهد", check: false },
-    { id: 4, name: "شیراز", check: false },
-  ];
-  const [checked, setChecked] = useState([]);
+  const [checkboxs, setCheckboxs] = useState([]);
 
-  const removeAllCity = () => {
-    setChecked([]);
-  };
+  useEffect(() => {
+    setCheckboxs(checkList);
+  }, []);
 
-  const filterHandler = (value) => {
-    setChecked((oldValues) => {
-      return oldValues.filter((item) => item !== value);
-    });
-  };
-
-  const handleCheck = (event) => {
-    var updatedList = [...checked];
-    if (event.target.checked) {
-      updatedList = [...checked, event.target.value];
+  const handleChange = (e) => {
+    const { name, checked } = e.target;
+    if (name === "allSelect") {
+      let tempCity = checkboxs.map((item) => {
+        return { ...item, isChecked: checked };
+      });
+      setCheckboxs(tempCity);
     } else {
-      updatedList.splice(checked.indexOf(event.target.value), 1);
+      let tempCity = checkboxs.map((item) =>
+        item.name === name ? { ...item, isChecked: checked } : item
+      );
+      setCheckboxs(tempCity);
     }
-    setChecked(updatedList);
   };
 
   let menRef = useRef();
@@ -61,9 +60,8 @@ const LocationModalContainer = ({ isOpenModal, setIsOpenModal }) => {
       <Box ref={menRef}>
         <LocationGlobalStyles />
         <LocationModalHeader
-          checked={checked}
-          removeAllCity={removeAllCity}
-          filterHandler={filterHandler}
+          checkboxs={checkboxs}
+          handleChange={handleChange}
         />
         <LocationModalSearch />
 
@@ -71,8 +69,8 @@ const LocationModalContainer = ({ isOpenModal, setIsOpenModal }) => {
           <LocationModalCities handlershowComponent={handlershowComponent} />
         ) : (
           <LocationModalSelectCity
-            handleCheck={handleCheck}
-            checkList={checkList}
+            handleChange={handleChange}
+            checkboxs={checkboxs}
             handlershowComponent={handlershowComponent}
           />
         )}

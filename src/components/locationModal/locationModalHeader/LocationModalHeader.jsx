@@ -11,21 +11,25 @@ import closeRed from "../../../assets/images/closeRed.svg";
 const LocationModalHeader = (props) => {
   return (
     <Box>
-      <Button onClick={props.removeAllCity}> حذف همه</Button>
+      <Button onClick={props.handleChange} name="allSelect">
+        حذف همه
+      </Button>
       <HeaderTitle> انتخاب شهر</HeaderTitle>
 
-      {props.checked.length
-        ? props.checked.map((item) => (
-            <BoxCity key={item}>
-              <ButtonCity onClick={()=>props.filterHandler(item)} >
+      {props.checkboxs.map((item) => {
+        if (item?.isChecked || false) {
+          return (
+            <BoxCity>
+              <ButtonCity name={item.name} onClick={props.remove} id={item.id}>
                 <img src={closeRed} />
               </ButtonCity>
-              <div>{item}</div>
+              <div>{item.name}</div>
             </BoxCity>
-          ))
-        : "یک شهر را انتخاب کنید"}
-
-
+          );
+        } else {
+          return <div>{item.milad}</div>;
+        }
+      })}
     </Box>
   );
 };

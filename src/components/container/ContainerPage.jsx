@@ -7,11 +7,13 @@ import LocationModalSelectCity from "../locationModal/locationModalSelectCity/Lo
 const ContainerPage = () => {
   return (
     <div>
+       
+
       <Box>
         <Header />
         {/* <Main/>
         <RightSidebar /> */}
-
+        
       </Box>
     </div>
   );

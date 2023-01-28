@@ -49,6 +49,10 @@ export const ButtonAccept = styled.button`
   &:hover {
     background-color: #cf4a4a;
   }
+  &:disabled {
+    background-color: #c7c5c5;
+    cursor: no-drop;
+  }
 `;
 
 export const ButtonCancel = styled.button`
