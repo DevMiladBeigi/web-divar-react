@@ -7,6 +7,10 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Vazir';
     src: url(${Vazir});
   }
+
+  a{
+    font-family: "Vazir";
+  }
 Button{
     width: auto;
     height: 38px;

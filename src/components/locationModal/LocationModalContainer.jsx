@@ -70,6 +70,7 @@ const LocationModalContainer = ({ isOpenModal, setIsOpenModal }) => {
         <LocationModalHeader
           checkboxs={checkboxs}
           handleChange={handleChange}
+          // remove={remove}
         />
         <LocationModalSearch />
 

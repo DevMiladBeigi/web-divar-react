@@ -21,7 +21,11 @@ const LocationModalHeader = (props) => {
           if (item?.isChecked || false) {
             return (
               <BoxCity>
-                <ButtonCity name={item.name} id={item.id}>
+                <ButtonCity
+                  name={item.name}
+                  id={item.id}
+                  onClick={props.remove}
+                >
                   <img src={closeRed} />
                 </ButtonCity>
                 <div>{item.name}</div>
