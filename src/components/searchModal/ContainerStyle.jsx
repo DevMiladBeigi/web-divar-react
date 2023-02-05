@@ -12,6 +12,7 @@ export const Box = styled.div`
   justify-content: flex-end;
   border-radius: 6px;
   box-shadow: 0 0 4px 0 grey;
+  cursor: pointer;
 
   div {
     margin-right: 30px;
