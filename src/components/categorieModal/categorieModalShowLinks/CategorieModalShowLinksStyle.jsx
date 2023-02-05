@@ -16,4 +16,5 @@ export const Box = styled.div`
   /* padding-top: 20px; */
   justify-content: flex-start;
   align-items: flex-end;
+  font-size: 12px;
 `;

@@ -1,10 +1,11 @@
 import styled from "styled-components";
+
 export const aTitle = styled.a`
   font-size: 15px;
   color: #6b6b6b;
   cursor: pointer;
   margin: 30px 10px 8px 0;
-  width: 50px;
+  width: auto;
   height: auto;
   &:hover {
     color: #a62626;
@@ -18,7 +19,7 @@ export const A = styled.a`
   color: #8f8f8f;
   cursor: pointer;
   margin: 0 10px 0 0;
-  width: 50px;
+  width: auto;
   height: auto;
   &:hover {
     color: #a62626;

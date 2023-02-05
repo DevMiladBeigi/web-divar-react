@@ -1,10 +1,13 @@
 import ContainerPage from "./components/container/ContainerPage";
 import GlobalStyles from "./components/globalStyles/GlobalStyles";
+import CategoryProvide from "./components/context/categoryContext";
 function App() {
   return (
     <>
-      <GlobalStyles />
-      <ContainerPage />
+      <CategoryProvide>
+        <GlobalStyles />
+        <ContainerPage />
+      </CategoryProvide>
     </>
   );
 }

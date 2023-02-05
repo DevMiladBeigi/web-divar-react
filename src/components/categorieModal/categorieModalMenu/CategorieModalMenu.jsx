@@ -1,5 +1,5 @@
-import React from "react";
-import * as S from './CategorieModalMenuStyle'
+import React, { useContext, useState } from "react";
+import * as S from "./CategorieModalMenuStyle";
 import rightArrow from "../../../assets/images/rightArrow.svg";
 import leftArrow from "../../../assets/images/leftArrow.svg";
 import home from "../../../assets/images/home.svg";
@@ -12,7 +12,11 @@ import game from "../../../assets/images/game.svg";
 import users from "../../../assets/images/users.svg";
 import microphone from "../../../assets/images/microphone.svg";
 import bag from "../../../assets/images/bag.svg";
+import { CategoryContext } from "../../context/categoryContext";
 const CategorieModalMenu = () => {
+  const { isHome, isCar, isDigital, isKitchen,ShowDigital,ShowKitchen, ShowHome, ShowCar } =
+    useContext(CategoryContext);
+
   return (
     <S.BoxMenu>
       <S.AllCategory href="#">
@@ -20,28 +24,34 @@ const CategorieModalMenu = () => {
         <img src={rightArrow} alt="" />
       </S.AllCategory>
 
-      <S.A>
+      <S.A
+        style={isHome ? { background: "#f3f3f3" } : null}
+        onMouseEnter={() => ShowHome()}
+      >
         <img src={leftArrow} alt="" />
         <span>
           املاک
           <img src={home} alt="" />
         </span>
       </S.A>
-      <S.A>
+
+      <S.A   style={isCar ? { background: "#f3f3f3" } : null} onMouseEnter={() => ShowCar()}>
         <img src={leftArrow} alt="" />
         <span>
           وسایل نقلیه
           <img src={car} alt="" />
         </span>
       </S.A>
-      <S.A>
+
+
+      <S.A  style={isDigital ? { background: "#f3f3f3" } : null}  onMouseEnter={() => ShowDigital()}>
         <img src={leftArrow} alt="" />
         <span>
           کالای دیجیتال
           <img src={mobile} alt="" />
         </span>
       </S.A>
-      <S.A>
+      <S.A   style={isKitchen ? { background: "#f3f3f3" } : null}  onMouseEnter={() => ShowKitchen()}>
         <img src={leftArrow} alt="" />
         <span>
           خانه و آشپزخانه

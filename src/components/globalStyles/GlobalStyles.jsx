@@ -11,6 +11,10 @@ const GlobalStyles = createGlobalStyle`
   a{
     font-family: "Vazir";
   }
+  div{
+    font-family: "Vazir";
+
+  }
 Button{
     width: auto;
     height: 38px;

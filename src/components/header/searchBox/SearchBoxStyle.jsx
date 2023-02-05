@@ -8,26 +8,23 @@ export const Search = styled.input`
   text-align: right;
   outline: none;
   justify-content: center;
-  @media (max-width: 1024px) {
-    width: 350px;
-  }
+
 `;
 
 export const FormSearch = styled.form`
   width: 450px;
+  background: white;
   height: 20px;
   display: flex;
   justify-content: center;
   text-align: center;
   padding: 10px;
   background-color: #f5f4f4;
+  /* f5f4f4 */
   border-radius: 6px;
   margin-top: 4px;
   margin-right: 1px;
-  @media (max-width: 1024px) {
-    width: 350px;
-    margin-right: 10px;
-  }
+
 `;
 export const ImageIcon = styled.img`
   width: 20px;

@@ -4,14 +4,14 @@ export const BoxMenu = styled.div`
   position: absolute;
   margin-top: 48px;
   height: auto;
-  width: 20%;
+  width: 18%;
   /* background-color: green; */
   display: flex;
   /* justify-content: flex-start; */
   flex-direction: column;
   img {
-    width: 17px;
-    height: 17px;
+    width: 15px;
+    height: 15px;
     margin-right: 15px;
     margin-top: 10px;
   }
@@ -19,11 +19,12 @@ export const BoxMenu = styled.div`
     margin: 8px;
   }
   overflow: auto;
+  font-size: 13px;
 `;
 
 export const AllCategory = styled.a`
   width: auto;
-  height: 40px;
+  height: 30px;
   border: 2px solid #adadad8e;
   text-decoration: none;
   display: flex;
@@ -38,11 +39,19 @@ export const AllCategory = styled.a`
     transition: 500ms;
   }
   cursor: pointer;
+  span{
+    margin-top: 4px;
+  }
+  img{
+    margin-top: 6px;
+    width: 15px;
+    height: 15px;
+  }
 `;
 
 export const A = styled.a`
   width: auto;
-  height: 40px;
+  height: 30px;
   display: flex;
   margin-left: 17px;
   margin-top: 10px;
@@ -61,8 +70,8 @@ export const A = styled.a`
     }
   }
   img {
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     margin-left: 10px;
     margin-top: 10px;
   }

@@ -1,18 +1,21 @@
-import React from "react";
+import { React } from "react";
 import * as S from "./containerStyle";
 import CategorieModalMenu from "./categorieModalMenu/CategorieModalMenu";
-import CategorieModalShowlinks from './categorieModalShowLinks/CategorieModalShowLinks'
-
-const Container = () => {
+import CategorieModalShowlinks from "./categorieModalShowLinks/CategorieModalShowLinks";
+import useClickOuteSide from "../hooks/useClickOuteSide";
+const Container = (props) => {
+  let domNode = useClickOuteSide(() => {
+    props.setIsOpenModal(false);
+  });
   return (
-    <S.Box>
-      <S.AllCategory2 href="#">
-        <span>همه آگهی های سرگرمی و فراقت </span>
-      </S.AllCategory2>
-      <CategorieModalShowlinks />
-      <S.VerticalLine></S.VerticalLine>
-      <CategorieModalMenu />
-    </S.Box>
+    <S.Backdrop>
+      <S.Box ref={domNode}>
+        <CategorieModalShowlinks />
+        <S.VerticalLine></S.VerticalLine>
+
+        <CategorieModalMenu />
+      </S.Box>
+    </S.Backdrop>
   );
 };
 
