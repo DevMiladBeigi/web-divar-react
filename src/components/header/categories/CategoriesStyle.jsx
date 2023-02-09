@@ -16,6 +16,7 @@ export const Button = styled.button`
     background-color: #dad9d9;
     transition: 200ms;
   }
+  /* display: none; */
 `;
 
 export const Box = styled.div`

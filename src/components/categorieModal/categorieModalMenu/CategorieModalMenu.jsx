@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import * as S from "./CategorieModalMenuStyle";
 import rightArrow from "../../../assets/images/rightArrow.svg";
 import leftArrow from "../../../assets/images/leftArrow.svg";

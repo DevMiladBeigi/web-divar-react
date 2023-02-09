@@ -11,6 +11,7 @@ import EnterAd from './enterAd/EnterAd'
 
 const Header = () => {
   return (
+    <>
     <Box>
       <EnterAd/>
       <Support/>
@@ -21,6 +22,7 @@ const Header = () => {
       <Locations/>
       <Logo />
     </Box>
+    </>
   );
 };
 export default Header;

@@ -7,6 +7,11 @@ const CategoryProvide = ({ children }) => {
   const [isCar, setIsCar] = useState(false);
   const [isDigital, setisDigital] = useState(false);
   const [isKitchen, setisKitchen] = useState(false);
+  const [isShow, setIsShow] = useState(false);
+
+  const Show = () => {
+    setIsShow(true);
+  };
 
   const ShowHome = () => {
     setIsHome(true);
@@ -50,6 +55,8 @@ const CategoryProvide = ({ children }) => {
         setisKitchen,
         isDigital,
         setisDigital,
+        isShow,
+        Show,
       }}
     >
       {children}
