@@ -29,10 +29,3 @@ export const BoxNumber = styled.div`
   margin-top: 7px;
 `;
 
-export const VerticalLine = styled.div`
-  width: 250px;
-  height: 1px;
-  background-color: #b4b4b4;
-  margin-top: 10px;
-  margin-left: 15px;
-`;

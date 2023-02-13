@@ -1,20 +1,19 @@
 import { React, useContext } from "react";
 import * as S from "./IdentityAcceptStyle";
-import accept from "../../../assets/images/accept.svg";
-import { CategoryContext } from "../../context/categoryContext";
+import accept from "../../../../assets/images/accept.svg";
+import { CategoryContext } from "../../../context/categoryContext";
 import { Link } from "react-router-dom";
 
 const IdentityAccept = () => {
-  const { Show } = useContext(CategoryContext);
+  const { Show,isShow } = useContext(CategoryContext);
   return (
     <>
       <S.Box>
-        <S.TagLink onClick={() => Show()} to="/identity-accept">
+        <S.TagLink isShow={isShow} onClick={() => Show()} to="/identity-accept">
           تایید هویت
         </S.TagLink>
         <img src={accept} />
       </S.Box>
-      <S.VerticalLine></S.VerticalLine>
     </>
   );
 };

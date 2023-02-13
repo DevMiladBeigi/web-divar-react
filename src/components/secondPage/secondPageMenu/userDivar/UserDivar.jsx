@@ -1,7 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import * as S from "./UserDivarStyle";
-import user from "../../../assets/images/user.svg";
-import {} from '../../context/categoryContext'
+import user from "../../../../assets/images/user.svg";
 const UserDivar = () => {
   return (
     <S.Box>
@@ -11,7 +10,6 @@ const UserDivar = () => {
       </S.BoxTitle>
 
       <S.BoxNumber>تلفن 09359537537</S.BoxNumber>
-      <S.VerticalLine ></S.VerticalLine>
     </S.Box>
   );
 };

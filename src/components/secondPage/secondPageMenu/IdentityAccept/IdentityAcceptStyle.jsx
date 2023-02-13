@@ -6,9 +6,7 @@ export const Box = styled.div`
   height: auto;
   display: flex;
   justify-content: flex-end;
-  &:hover {
-    background-color: #eeeeee;
-  }
+
   img {
     width: 20px;
     height: 20px;
@@ -16,15 +14,8 @@ export const Box = styled.div`
     margin-top: 15px;
     margin-right: 15px;
   }
-`;
 
-export const A = styled.a`
-  width: 100%;
-  height: 40px;
-  color: #727272;
-  text-decoration: none;
-  font-size: 14px;
-  margin-top: 15px;
+  margin-top: 10px;
 `;
 
 export const TagLink = styled(Link)`
@@ -41,12 +32,8 @@ export const TagLink = styled(Link)`
   &:visited {
     color: #727272;
   }
-`;
-
-export const VerticalLine = styled.div`
-  width: 90%;
-  height: 1px;
-  background-color: #b4b4b4;
-  display: flex;
-  margin-left: 12px;
+  &:hover {
+    color: #4e4e4e;
+  }
+  /* pointer-events: ${(props) => (props.isShow ? "none" : null)}; */
 `;

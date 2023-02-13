@@ -1,14 +1,11 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 export const Box = styled.div`
   width: 100%;
   height: auto;
   display: flex;
   justify-content: flex-end;
-  &:hover {
-    background-color: #eeeeee;
-  }
+ 
   img {
     width: 20px;
     height: 20px;
@@ -16,6 +13,7 @@ export const Box = styled.div`
     margin-top: 15px;
     margin-right: 15px;
   }
+  
 `;
 
 export const A = styled.a`
@@ -25,28 +23,15 @@ export const A = styled.a`
   text-decoration: none;
   font-size: 14px;
   margin-top: 15px;
-`;
-
-export const TagLink = styled(Link)`
-  width: 100%;
-  height: 40px;
-  color: #727272;
-  font-size: 14px;
-  margin-top: 15px;
-  text-decoration: none;
-  &:active {
-    color: #727272;
-  }
-
-  &:visited {
-    color: #727272;
-  }
-`;
+  &:hover {
+    color: #2b2b2b;
+  }`;
 
 export const VerticalLine = styled.div`
-  width: 90%;
+  width: 80%;
   height: 1px;
   background-color: #b4b4b4;
   display: flex;
-  margin-left: 12px;
+  margin-left: 52px;
+  margin-top: 45px;
 `;

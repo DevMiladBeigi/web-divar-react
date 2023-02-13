@@ -7,7 +7,7 @@ import { useState } from "react";
 const MyDivar = () => {
   const { isShow } = useContext(CategoryContext)
 
-  const [openModal, setOpenModal] = useState(true);
+  const [openModal, setOpenModal] = useState(false);
   return (
     <div style={isShow ? {marginRight:'568px'}: null}>
       <Button openModal={openModal} onClick={() => setOpenModal(!openModal)}>
