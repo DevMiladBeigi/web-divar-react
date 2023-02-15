@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import * as S from "./PrepaymentStyle";
 import wallet from "../../../../assets/images/wallet.svg";
+import {CategoryContext} from '../../../context/categoryContext'
 const Prepayment = () => {
+  const { Show } = useContext(CategoryContext);
+
   return (
     <>
     <S.Box>
-      <S.A href="#">  امکان بیعانه</S.A>
-      <img src={wallet}/>
+    <S.TagLink onClick={() => Show()} to="/prepayment">
+          امکان بیعانه
+        </S.TagLink>      <img src={wallet}/>
     
     </S.Box>
     </>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Box = styled.div`
   width: 100%;
@@ -18,16 +19,21 @@ export const Box = styled.div`
   
 `;
 
-export const A = styled.a`
+export const TagLink = styled(Link)`
   width: 100%;
   height: 40px;
   color: #727272;
-  text-decoration: none;
   font-size: 14px;
   margin-top: 15px;
-  /* margin-right: 15px; */
-`;
+  text-decoration: none;
+  &:active {
+    color: #727272;
+  }
 
+  &:visited {
+    color: #727272;
+  }
+`;
 export const VerticalLine = styled.div`
   width: 90%;
   height: 1px;

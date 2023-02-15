@@ -2,7 +2,6 @@ import { React, useContext } from "react";
 import * as S from "./IdentityAcceptStyle";
 import accept from "../../../assets/images/accept.svg";
 import { CategoryContext } from "../../context/categoryContext";
-import { Link } from "react-router-dom";
 
 const IdentityAccept = () => {
   const { Show } = useContext(CategoryContext);

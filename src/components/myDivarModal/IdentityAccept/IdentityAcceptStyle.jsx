@@ -18,14 +18,7 @@ export const Box = styled.div`
   }
 `;
 
-export const A = styled.a`
-  width: 100%;
-  height: 40px;
-  color: #727272;
-  text-decoration: none;
-  font-size: 14px;
-  margin-top: 15px;
-`;
+
 
 export const TagLink = styled(Link)`
   width: 100%;

@@ -8,9 +8,15 @@ const CategoryProvide = ({ children }) => {
   const [isDigital, setisDigital] = useState(false);
   const [isKitchen, setisKitchen] = useState(false);
   const [isShow, setIsShow] = useState(false);
+  const [isopenModal, setISOpenModal] = useState(false);
+
+  const OpenModal = () => {
+    setISOpenModal(!isopenModal);
+  };
 
   const Show = () => {
     setIsShow(true);
+    setISOpenModal(false);
   };
 
   const ShowHome = () => {
@@ -57,6 +63,9 @@ const CategoryProvide = ({ children }) => {
         setisDigital,
         isShow,
         Show,
+        isopenModal,
+        setISOpenModal,
+        OpenModal,
       }}
     >
       {children}

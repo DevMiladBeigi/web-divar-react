@@ -2,19 +2,17 @@ import React, { useContext } from "react";
 import Button from "./MyDivarStyle";
 import user from "../../../assets/images/user.svg";
 import Container from "../../myDivarModal/Container";
-import {CategoryContext} from '../../context/categoryContext'
-import { useState } from "react";
+import { CategoryContext } from "../../context/categoryContext";
 const MyDivar = () => {
-  const { isShow } = useContext(CategoryContext)
+  const { isShow, isopenModal, OpenModal } = useContext(CategoryContext);
 
-  const [openModal, setOpenModal] = useState(false);
   return (
-    <div style={isShow ? {marginRight:'568px'}: null}>
-      <Button openModal={openModal} onClick={() => setOpenModal(!openModal)}>
+    <div style={isShow ? { marginRight: "568px" } : null}>
+      <Button isopenModal={isopenModal} onClick={() => OpenModal()}>
         <div> دیوار من </div>
         <img src={user} alt="" />
       </Button>
-      {openModal ? <Container  /> : null}
+      {isopenModal ? <Container /> : null}
     </div>
   );
 };
