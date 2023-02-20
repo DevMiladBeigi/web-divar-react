@@ -1,10 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Button } from "./LocationStyle";
 import location from "../../../assets/images/location.svg";
 import { useState } from "react";
 import LocationModalContainer from "../../locationModal/LocationModalContainer";
-
-
 
 const Locations = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);

@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import * as S from "./BusinessStyle";
 import shop from "../../../../assets/images/shop.svg";
+import {CategoryContext} from '../../../context/categoryContext'
 const Business = () => {
+  const { Show } = useContext(CategoryContext);
+
   return (
     <>
       <S.VerticalLine></S.VerticalLine>
       <S.Box>
-        <S.A href="#"> دیوار برای کسب و کارها </S.A>
-        <img src={shop} />
+      <S.TagLink onClick={() => Show()} to="/business">
+          دیوار برای کسب و کارها
+        </S.TagLink>        <img src={shop} />
       </S.Box>
       <S.VerticalLine></S.VerticalLine>
     </>

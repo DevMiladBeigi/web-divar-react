@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import * as S from "./ContainerStyle";
 import PageHeader from "./secondPageHeader/PageHeader";
 import PageMenu from "./secondPageMenu/PageMenu";
@@ -6,12 +6,16 @@ import IdentityAcceptPageMain from "./IdentityAcceptPage/IdentityAcceptPageMain"
 import MarkPage from "./markPage/MarkPage";
 import MyAdvertisePageMain from "./myAdvertise/MyAdvertisePageMain";
 import NotePage from "./note/NotePage";
-import PrepaymentPage from './prepayment/PrepaymentPage'
-import RecentVisitsPage from './recentVisits/RecentVisitsPage'
-import BusinessPage from './business/BusinessPage'
+import PrepaymentPage from "./prepayment/PrepaymentPage";
+import RecentVisitsPage from "./recentVisits/RecentVisitsPage";
+import BusinessPage from "./business/BusinessPage";
+import ChatPage from "./chat/ChatPage";
 import { Route, Routes } from "react-router-dom";
+import { CategoryContext } from "../context/categoryContext";
 
 const Container = () => {
+  const { showChat } = useContext(CategoryContext);
+
   return (
     <S.Box>
       <Routes>
@@ -25,9 +29,10 @@ const Container = () => {
         <Route path="prepayment" element={<PrepaymentPage />}></Route>
         <Route path="recent-visits" element={<RecentVisitsPage />}></Route>
         <Route path="business" element={<BusinessPage />}></Route>
+        <Route path="chat" element={<ChatPage />}></Route>
       </Routes>
       <PageHeader />
-      <PageMenu />
+      {showChat ?  null : <PageMenu /> }
     </S.Box>
   );
 };

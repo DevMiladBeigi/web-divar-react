@@ -9,6 +9,13 @@ const CategoryProvide = ({ children }) => {
   const [isKitchen, setisKitchen] = useState(false);
   const [isShow, setIsShow] = useState(false);
   const [isopenModal, setISOpenModal] = useState(false);
+  const [showChat, setShowChat] = useState(false);
+
+  const ShowChatFan = () => {
+    setShowChat(true);
+    setIsShow(true);
+    console.log(showChat);
+  };
 
   const OpenModal = () => {
     setISOpenModal(!isopenModal);
@@ -17,6 +24,7 @@ const CategoryProvide = ({ children }) => {
   const Show = () => {
     setIsShow(true);
     setISOpenModal(false);
+    setShowChat(false);
   };
 
   const ShowHome = () => {
@@ -66,6 +74,8 @@ const CategoryProvide = ({ children }) => {
         isopenModal,
         setISOpenModal,
         OpenModal,
+        ShowChatFan,
+        showChat,
       }}
     >
       {children}

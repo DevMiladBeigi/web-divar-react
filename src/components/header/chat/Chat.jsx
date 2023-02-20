@@ -1,14 +1,17 @@
-import React from "react";
-import Button from "./ChatStyle";
+import { React, useContext } from "react";
+import * as S from "./ChatStyle";
 import chat from "../../../assets/images/chat.svg";
+import { CategoryContext } from "../../context/categoryContext";
 
 const Chat = () => {
+  const { ShowChatFan } = useContext(CategoryContext);
+
   return (
     <>
-      <Button>
-        <div>  چت </div>
+      <S.TagLink onClick={() => ShowChatFan()} to='/chat'>
+        <div> چت </div>
         <img src={chat} alt="" />
-      </Button>
+      </S.TagLink>
     </>
   );
 };
