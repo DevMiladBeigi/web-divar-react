@@ -9,18 +9,25 @@ const data = [
     title: "فروشگاه شما در دیوار",
     description: "فعالیت حرفه ای در بازار آنلاین",
     image: b1,
+    to:'/store'
   },
   {
     title: "آژانس املاک شما در دیوار",
     description: "امکانات تخصصی برای مدیران و مشاوران",
     image: b2,
+    to:'/home'
+
   },
   {
     title: "نمایشگاه اتومبیل شما در دیوار",
     description: "فعالیت حرفه ای در بازار خودرو",
     image: b3,
+    to:'/car'
+
   },
 ];
+
+
 const BusinessPage = () => {
   return (
     <S.Box>
@@ -30,9 +37,12 @@ const BusinessPage = () => {
       </div>
 
       {data.map((item) => (
-        <S.BoxItem href="#">
+        <S.BoxItem href={item.to}>
           <S.BoxIcon>
-            <img style={{width:'15px' ,height:'15px',marginRight:'25px'}} src={leftArrow} />
+            <img
+              style={{ width: "15px", height: "15px", marginRight: "25px" }}
+              src={leftArrow}
+            />
           </S.BoxIcon>
           <S.BoxTitle>
             <div> {item.title} </div>

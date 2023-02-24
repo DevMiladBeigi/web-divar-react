@@ -10,6 +10,7 @@ import PrepaymentPage from "./prepayment/PrepaymentPage";
 import RecentVisitsPage from "./recentVisits/RecentVisitsPage";
 import BusinessPage from "./business/BusinessPage";
 import ChatPage from "./chat/ChatPage";
+import ContainerSupport from "./support/Container";
 import { Route, Routes } from "react-router-dom";
 import { CategoryContext } from "../context/categoryContext";
 
@@ -29,7 +30,8 @@ const Container = () => {
         <Route path="prepayment" element={<PrepaymentPage />}></Route>
         <Route path="recent-visits" element={<RecentVisitsPage />}></Route>
         <Route path="business" element={<BusinessPage />}></Route>
-        <Route path="chat" element={<ChatPage />}></Route>
+        {/* <Route path="chat" element={<ChatPage />}></Route> */}
+        <Route path="support" element={<ContainerSupport />}></Route>
       </Routes>
       <PageHeader />
       {showChat ?  null : <PageMenu /> }

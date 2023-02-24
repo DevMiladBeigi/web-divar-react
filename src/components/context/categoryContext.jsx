@@ -14,7 +14,6 @@ const CategoryProvide = ({ children }) => {
   const ShowChatFan = () => {
     setShowChat(true);
     setIsShow(true);
-    console.log(showChat);
   };
 
   const OpenModal = () => {

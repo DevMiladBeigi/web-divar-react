@@ -7,6 +7,7 @@ export const Box=styled.div`
     z-index:1000000;
     /* background-color: red; */
     justify-content: flex-end;
+    /* flex-direction: column; */
     
 
 `
