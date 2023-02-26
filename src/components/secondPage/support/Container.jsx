@@ -9,7 +9,7 @@ const ContainerSupport = () => {
     <S.Box>
       <HeaderSupport />
       <BodySupport />
-      {/* <FooterSupport /> */}
+      <FooterSupport />
     </S.Box>
   );
 };

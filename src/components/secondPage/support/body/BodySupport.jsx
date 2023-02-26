@@ -10,88 +10,240 @@ import s7 from "../../../../assets/images/s7.png";
 import s8 from "../../../../assets/images/s8.png";
 import LinkTitle from "./linkTitle/LinkTitle";
 import LinkTag from "./linkTag/LinkTag";
-const dataTitle = [
+const data = [
   {
     title: " دیوار کسب و کارها    ",
     image: s8,
     to: "/store",
+    submenu: [
+      {
+        link: "چگونه در «دیوار» حساب کاربری بسازم؟",
+        to: "/",
+      },
+      {
+        link: "چگونه اپلیکیشن دیوار را دانلود کنم؟",
+        to: "/",
+      },
+      {
+        link: "آیا برای ثبت آگهی باید حساب کاربری بسازم؟",
+        to: "/",
+      },
+      {
+        link: "چگونه وارد حساب خود شوم؟",
+        to: "/",
+      },
+      {
+        link: "چگونه از حساب کاربری خود خارج شوم؟",
+        to: "/",
+      },
+    ],
   },
   {
     title: " تخلفات و گزارش ها    ",
     image: s7,
     to: "/home",
+    submenu: [
+      {
+        link: "چگونه در «دیوار» حساب کاربری بسازم؟",
+        to: "/",
+      },
+      {
+        link: "چگونه اپلیکیشن دیوار را دانلود کنم؟",
+        to: "/",
+      },
+      {
+        link: "آیا برای ثبت آگهی باید حساب کاربری بسازم؟",
+        to: "/",
+      },
+      {
+        link: "چگونه وارد حساب خود شوم؟",
+        to: "/",
+      },
+      {
+        link: "چگونه از حساب کاربری خود خارج شوم؟",
+        to: "/",
+      },
+    ],
   },
   {
     title: "    پرداخت و موارد مالی   ",
     image: s6,
     to: "/car",
+    submenu: [
+      {
+        link: "چگونه در «دیوار» حساب کاربری بسازم؟",
+        to: "/",
+      },
+      {
+        link: "چگونه اپلیکیشن دیوار را دانلود کنم؟",
+        to: "/",
+      },
+      {
+        link: "آیا برای ثبت آگهی باید حساب کاربری بسازم؟",
+        to: "/",
+      },
+      {
+        link: "چگونه وارد حساب خود شوم؟",
+        to: "/",
+      },
+      {
+        link: "چگونه از حساب کاربری خود خارج شوم؟",
+        to: "/",
+      },
+    ],
   },
   {
     title: "   چت دیوار    ",
     image: s5,
     to: "/car",
+    submenu: [
+      {
+        link: "چگونه در «دیوار» حساب کاربری بسازم؟",
+        to: "/",
+      },
+      {
+        link: "چگونه اپلیکیشن دیوار را دانلود کنم؟",
+        to: "/",
+      },
+      {
+        link: "آیا برای ثبت آگهی باید حساب کاربری بسازم؟",
+        to: "/",
+      },
+      {
+        link: "چگونه وارد حساب خود شوم؟",
+        to: "/",
+      },
+      {
+        link: "چگونه از حساب کاربری خود خارج شوم؟",
+        to: "/",
+      },
+    ],
   },
   {
     title: "  نمایش و جستجوی آگهی  ",
     image: s4,
     to: "/car",
+    submenu: [
+      {
+        link: "چگونه در «دیوار» حساب کاربری بسازم؟",
+        to: "/",
+      },
+      {
+        link: "چگونه اپلیکیشن دیوار را دانلود کنم؟",
+        to: "/",
+      },
+      {
+        link: "آیا برای ثبت آگهی باید حساب کاربری بسازم؟",
+        to: "/",
+      },
+      {
+        link: "چگونه وارد حساب خود شوم؟",
+        to: "/",
+      },
+      {
+        link: "چگونه از حساب کاربری خود خارج شوم؟",
+        to: "/",
+      },
+    ],
   },
   {
     title: "    بررسی و رد آگهی   ",
     image: s3,
     to: "/car",
+    submenu: [
+      {
+        link: "چگونه در «دیوار» حساب کاربری بسازم؟",
+        to: "/",
+      },
+      {
+        link: "چگونه اپلیکیشن دیوار را دانلود کنم؟",
+        to: "/",
+      },
+      {
+        link: "آیا برای ثبت آگهی باید حساب کاربری بسازم؟",
+        to: "/",
+      },
+      {
+        link: "چگونه وارد حساب خود شوم؟",
+        to: "/",
+      },
+      {
+        link: "چگونه از حساب کاربری خود خارج شوم؟",
+        to: "/",
+      },
+    ],
   },
   {
     title: " ثبت و مدیریت آگهی   ",
     image: s2,
     to: "/car",
-    Submenu: "okgg",
+    submenu: [
+      {
+        link: "چگونه در «دیوار» حساب کاربری بسازم؟",
+        to: "/",
+      },
+      {
+        link: "چگونه اپلیکیشن دیوار را دانلود کنم؟",
+        to: "/",
+      },
+      {
+        link: "آیا برای ثبت آگهی باید حساب کاربری بسازم؟",
+        to: "/",
+      },
+      {
+        link: "چگونه وارد حساب خود شوم؟",
+        to: "/",
+      },
+      {
+        link: "چگونه از حساب کاربری خود خارج شوم؟",
+        to: "/",
+      },
+    ],
   },
   {
     title: "       ورود و حساب کاربری    ",
     image: s1,
     to: "/car",
-    Submenu: [
+    submenu: [
       {
-        link: "ok",
-        to: "okk",
+        link: "چگونه در «دیوار» حساب کاربری بسازم؟",
+        to: "/",
+      },
+      {
+        link: "چگونه اپلیکیشن دیوار را دانلود کنم؟",
+        to: "/",
+      },
+      {
+        link: "آیا برای ثبت آگهی باید حساب کاربری بسازم؟",
+        to: "/",
+      },
+      {
+        link: "چگونه وارد حساب خود شوم؟",
+        to: "/",
+      },
+      {
+        link: "چگونه از حساب کاربری خود خارج شوم؟",
+        to: "/",
       },
     ],
   },
 ];
-console.log(dataTitle);
 
 const BodySupport = () => {
   return (
     <S.Box>
-      {dataTitle.map((item, index) => (
+      {data.map((item, index) => (
         <S.BoxItem key={index}>
           <div>
             <img src={item.image} alt="" />
           </div>
           <LinkTitle title={item.title} to={item.to} />
-          <LinkTag Submenu={item.Submenu} />
-          <S.LinkMoreTag to=""> موارد بیشتر </S.LinkMoreTag>
+          <LinkTag item={item} submenu={item.submenu} />
+          <S.LinkMoreTag to="">بیشتر</S.LinkMoreTag>
         </S.BoxItem>
       ))}
+      <S.Verticalline />
     </S.Box>
   );
 };
 export default BodySupport;
-
-{
-  /* <S.Box>
-{dataTitle.map((item, index) => (
-  <S.BoxItem key={index}>
-    <div>
-      <img src={item.image} alt="" />
-    </div>
-    <S.LinkTitle to={item.to}> {item.title} </S.LinkTitle>
-
-    <S.LinkTag to=""> </S.LinkTag>
-
-    <S.LinkMoreTag to=""> موارد بیشتر </S.LinkMoreTag>
-  </S.BoxItem>
-))}
-</S.Box> */
-}

@@ -6,13 +6,7 @@ const Box = styled.div`
   display: flex;
   position: fixed;
   justify-content: right;
-  /* @media (max-width: 1024px) {
-        width: 1024px;
-        height: 64px;
-
-      } */
+  background-color: white;
 `;
-
-
 
 export default Box;
