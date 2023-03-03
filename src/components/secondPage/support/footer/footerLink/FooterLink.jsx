@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import * as S from "./FooterLinkStyle";
+import support from "../../../../../assets/images/support.svg";
+import { CategoryContext } from "../../../../context/categoryContext";
 
 const data = [
   {
@@ -24,6 +26,7 @@ const data = [
   },
 ];
 const FooterLink = () => {
+  const {ShowChatSupportModal}=useContext(CategoryContext)
   return (
     <S.Box>
       {data.map((item, index) => (
@@ -35,6 +38,10 @@ const FooterLink = () => {
           </div>
         </S.BoxItem>
       ))}
+
+      <S.Button onClick={ShowChatSupportModal}>
+        <img src={support} alt="" />
+      </S.Button>
     </S.Box>
   );
 };

@@ -10,10 +10,16 @@ const CategoryProvide = ({ children }) => {
   const [isShow, setIsShow] = useState(false);
   const [isopenModal, setISOpenModal] = useState(false);
   const [showChat, setShowChat] = useState(false);
+  const [showChatSupport, setShowChatSupport] = useState(false);
 
   const ShowChatFan = () => {
     setShowChat(true);
     setIsShow(true);
+  };
+
+  const ShowChatSupportModal = () => {
+    setShowChatSupport(true);
+  
   };
 
   const OpenModal = () => {
@@ -75,6 +81,9 @@ const CategoryProvide = ({ children }) => {
         OpenModal,
         ShowChatFan,
         showChat,
+        ShowChatSupportModal,
+        showChatSupport,
+        setShowChatSupport,
       }}
     >
       {children}

@@ -6,7 +6,8 @@ const Box = styled.div`
   display: flex;
   position: fixed;
   justify-content: right;
-  background-color: white;
+  background-color: #ffffff;
+  z-index: 1000000;
 `;
 
 export default Box;

@@ -7,6 +7,7 @@ const FooterSupport = () => {
     <S.Box>
       <FooterLink />
       <FooterSocial />
+     
     </S.Box>
   );
 };

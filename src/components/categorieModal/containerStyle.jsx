@@ -8,7 +8,7 @@ export const Box = styled.div`
   justify-content: flex-end;
   position: absolute;
   left: 130px;
-  top:0;
+  top: 0;
   z-index: 10;
   /* background-color: red; */
   overflow: auto;
@@ -16,8 +16,6 @@ export const Box = styled.div`
   background-color: white;
   box-shadow: 0 0 10px 0 grey;
 `;
-
-
 
 export const VerticalLine = styled.div`
   height: 460px;
@@ -28,9 +26,8 @@ export const VerticalLine = styled.div`
   right: 220px;
 `;
 
-
 export const Backdrop = styled.div`
-transition: 1s;
+  transition: 1s;
   position: fixed;
   top: 70px;
   left: 0;
