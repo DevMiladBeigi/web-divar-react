@@ -13,6 +13,7 @@ import ChatPage from "./chat/ChatPage";
 import ContainerSupport from "./support/Container";
 import { Route, Routes } from "react-router-dom";
 import { CategoryContext } from "../context/categoryContext";
+import ContainerEnterAd from "./enterAd/ContainerEnterAd";
 
 const Container = () => {
   const { showChat } = useContext(CategoryContext);
@@ -32,9 +33,10 @@ const Container = () => {
         <Route path="business" element={<BusinessPage />}></Route>
         {/* <Route path="chat" element={<ChatPage />}></Route> */}
         <Route path="support" element={<ContainerSupport />}></Route>
+        <Route path="new" element={<ContainerEnterAd />}></Route>
       </Routes>
       <PageHeader />
-      {showChat ?  null : <PageMenu /> }
+      {showChat ? null : <PageMenu />}
     </S.Box>
   );
 };

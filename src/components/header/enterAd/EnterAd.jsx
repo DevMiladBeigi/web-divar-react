@@ -1,12 +1,14 @@
-import React from "react";
-import Button from "./EnterAdStyle";
-
+import React, { useContext } from "react";
+import { CategoryContext } from "../../context/categoryContext";
+import * as S from  './EnterAdStyle'
 const EnterAd = () => {
+  const { ShowChatFan } = useContext(CategoryContext);
+
   return (
     <>
-      <Button>
+      <S.TagLink onClick={() => ShowChatFan()} to='/new'>
         <div>  ثبت آگهی </div>
-      </Button>
+      </S.TagLink>
     </>
   );
 };

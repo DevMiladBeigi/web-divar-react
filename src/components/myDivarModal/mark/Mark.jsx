@@ -11,7 +11,7 @@ const Mark = () => {
       <S.Box>
         <S.TagLink onClick={() => Show()} to="/mark">
           نشان ها
-        </S.TagLink>{" "}
+        </S.TagLink>
         <img src={mark} />
       </S.Box>
       <S.VerticalLine></S.VerticalLine>
